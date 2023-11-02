@@ -1,0 +1,95 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title color="dark">A.I.A</ion-title>
+        <ion-buttons slot="end">
+          <ion-menu-button color="medium"></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="light">
+
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light"  >
+            <ion-icon name="rocket-outline" slot="start" color="dark"></ion-icon>
+            <ion-label>Mission</ion-label>
+          </ion-item>
+
+          <ion-list slot="content" style="padding-top: 0px; padding-bottom: 0px;" *ngFor="let pages of Task" >
+            <ion-menu-toggle auto-hide="true">
+              <ion-item style="margin-left: 30px;"  [routerLink]="pages.url" routerDirection="forward" menuClose class="sub-menu">
+                <ion-icon [name]="pages.icon" slot="start" color="primary"></ion-icon>
+                {{pages.title}}
+              </ion-item> 
+               <ion-button fill="Add ">Add</ion-button>
+            </ion-menu-toggle>
+          </ion-list> 
+        </ion-accordion>
+
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light"  >
+            <ion-icon name="git-branch-outline" slot="start" color="dark"></ion-icon>
+            <ion-label>Operate</ion-label>
+          </ion-item>
+
+          <ion-list slot="content" style="padding-top: 0px; padding-bottom: 0px;" *ngFor="let pages of Fly">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item style="margin-left: 30px;" [routerLink]="pages.url" routerDirection="forward" menuClose class="sub-menu">
+                <ion-icon [name]="pages.icon" slot="start" color="primary"></ion-icon>
+                {{pages.title}}
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-accordion>
+
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light"  >
+            <ion-icon name="planet" slot="start" color="dark"></ion-icon>
+            <ion-label>Process</ion-label>
+          </ion-item>
+
+          <ion-list slot="content" style="padding-top: 0px; padding-bottom: 0px;" *ngFor="let pages of Project" lines="none">
+            <ion-menu-toggle auto-hide="false" color="primary">
+              <ion-item style="margin-left: 30px;" [routerLink]="pages.url" routerDirection="forward" menuClose class="sub-menu">
+                <ion-icon [name]="pages.icon" slot="start" color="primary"></ion-icon>
+                {{pages.title}}
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+        </ion-accordion>
+
+        <ion-accordion value="fourth">
+          <ion-item slot="header" color="light"  >
+            <ion-icon name="analytics" slot="start" color="dark"></ion-icon>
+            <ion-label>Analyse</ion-label>
+          </ion-item>
+
+          <ion-list slot="content" style="padding-top: 0px; padding-bottom: 0px;" *ngFor="let pages of Report" lines="none">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item style="margin-left: 30px;" [routerLink]="pages.url" routerDirection="forward" menuClose class="sub-menu">
+                <ion-icon [name]="pages.icon" slot="start" color="primary"></ion-icon>
+                {{pages.title}}
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-accordion>
+
+
+      </ion-accordion-group>
+      
+    </ion-content>
+    <ion-footer>
+      <ion-item lines="full">
+        <ion-icon color="primary" slot="start" :icon="moon"></ion-icon>
+        <ion-label>
+          Toggle Dark Theme
+        </ion-label>
+        <ion-toggle (ionChange)="changeTheme($event)"   slot="end"></ion-toggle>
+      </ion-item>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet Id="content"></ion-router-outlet>
+</ion-app>

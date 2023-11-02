@@ -1,0 +1,17 @@
+.trash {
+  position: absolute;
+  margin-left: 205px;
+  margin-top: -125px;
+  color: red;
+  font-size: 16px;
+}
+
+ion-content {
+  --background: none;
+  background-image: url('../../../assets/img/drone.gif');
+  // https://docs-demo.ionic.io/assets/madison.jpg
+  // background-image: url('https://docs-demo.ionic.io/assets/madison.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="medium"></ion-menu-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-icon name="logo-codepen"></ion-icon>&nbsp;
+    DRONE 
+  </ion-item>
+    <ion-buttons slot="end"> 
+      <ion-button color="dark" (click) ="logout()" id="logout">
+        {{ 'LOGOUT_TITLE' | translate }}
+        <ion-icon slot="end" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content padding class="background"></ion-content> -->
+<!-- <ion-content class="class-name"></ion-content> -->
+<ion-content class="ion-padding background"  >
+  <!-- <div[style.background-image]="'url(../../../assets/img/patrick-hendry-asHMHLCdv7M-unsplash.jpg)'"> </div> -->
+  <!-- <span class="hipster"></span> -->
+  
+  <!-- <ion-item>
+    <div>
+      <div *ngIf="plant.attachments">
+        <p>{{plant.attachmentsContentType}}, {{byteSize(plant.attachments)}}</p>
+        <ion-button
+          color="danger"
+          (click)="plant.attachments=null;plant.attachmentsContentType=null;form.patchValue({'attachments': ''});form.patchValue({'attachmentsContentType': ''})"
+        >
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <input type="file" data-cy="attachments" #fileInput (change)="setFileData($event, 'attachments', false)" />
+    </div>
+  </ion-item> -->
+
+  <!-- <ion-button style="color:black;" (click)="upload()" > upload
+  </ion-button>
+     -->
+  <!-- <ion-button style="color:black;"(click)="downloadassets()" >downloadassets
+  </ion-button> --> 
+  <!-- <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+</div> -->
+<!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" /> -->
+<!-- <div style="background-image: url('https://www.pngplay.com/wp-content/uploads/1/Drone-PNG-Pic-Background.png') ;background-repeat: no-repeat;background-attachment: fixed;"> -->
+<!-- <div
+  ng2FileDrop
+  [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+  (fileOver)="fileOverBase($event)"
+  [uploader]="uploader"
+  class="drop-zone"
+  style="width: 55%;"
+>
+Images and GCP File (optional)
+</div> -->
+
+<!-- <div class="file-input-container">
+  <label>
+  <input type="file" ng2FileSelect [uploader]="uploader" multiple />
+    Upload
+  </label>
+</div>
+
+<h2>Files: {{ uploader?.queue?.length }}</h2>
+
+<ion-list>
+  <ion-reorder-group (ionItemReorder)="reorderFiles($event)" disabled="false">
+    <ion-item *ngFor="let item of uploader.queue">
+      <ion-label> {{ item?.file?.name }} </ion-label>
+      <ion-reorder></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+</ion-list>
+  
+<ion-button style="color:black;" (click)="Starttask()" > Starttask
+</ion-button> -->
+
+<!-- <ion-content padding>
+  <app-multi-file-upload></app-multi-file-upload>
+</ion-content> -->
+<!-- </div> -->
+<app-multi-file-upload></app-multi-file-upload>
+<ion-progress-bar [value]="progress"></ion-progress-bar>
+<br>
+<ion-button style="color:black;" (click)="upload2()" > Starttask
+</ion-button> 
+
+<ion-button style="color:black;" (click)="downloadAndExtractZIP()" > Download
+</ion-button> 
+
+<ion-button style="color:black;" (click)="taskoutput()" > output
+</ion-button> 
+
+<div> OUTPUT: {{ Output }}  </div>
+
+<!-- <ion-button (click)="writeFile()">Write a file</ion-button> -->
+<!-- <ion-button class="download" id = 'a' style="color:black;" href="url" > Download
+</ion-button>  -->
+</ion-content>

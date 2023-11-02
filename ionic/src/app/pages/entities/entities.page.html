@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let entity of entities" (click)="openPage(entity)">
+      <h2> </h2>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="entities.length === 0"> </div>
+  <div class="map-container">
+    <div style="height: 50vh; margin:5px" id="map"></div>
+  </div>
+  <ion-row>
+    <ion-col style="text-align:center;padding: 3px;"size="4">
+      <!-- card 1 -->
+      <ion-card color="secondary" style="background-color: transparent;">
+        <div class="Innernav">
+          <ion-card-title  color="dark" style="font-size:10px;margin-top:12px;">Temperature</ion-card-title>
+          <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+          <ion-icon style="padding: 5px;" size="small" name="thermometer-outline"></ion-icon>
+          <!-- <i class="bi bi-cloud-sun" ></i> -->
+            <hr class="Innerhr">
+              <ion-text >
+                <!-- <p  class="p-value-margin">{{ gaugeData34[0].value }}°C</p> -->
+                <p  class="p-value-margin">28°C</p>
+
+              </ion-text>
+        </div>
+      </ion-card>
+    </ion-col>
+    <ion-col style="text-align:center;padding: 3px;"size="4">
+      <!-- card 1 -->
+      <ion-card color="tertiary" style="background-color: transparent;">
+        <div class="Innernav">
+          <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">Speed</ion-card-title>
+          <ion-icon style="padding: 5px;" size="small" name="bus-outline"></ion-icon>
+            <hr class="Innerhr">
+              <ion-text >
+                <!-- <p  class="p-value-margin">{{  gaugeData56[0].value }}km/h</p> -->
+                <p  class="p-value-margin">80km/h</p>
+
+              </ion-text>
+        </div>
+      </ion-card>
+    </ion-col>
+    <ion-col style="text-align:center;padding: 3px;"size="4">
+      <!-- card 1 -->
+      <ion-card color="success" style="background-color: transparent;">
+        <div class="Innernav">
+          <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">location</ion-card-title>
+          <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+          <ion-icon style="padding: 5px;" size="small" name="location-outline"></ion-icon>
+          <!-- <i class="bi bi-cloud-sun" ></i> -->
+            <hr class="Innerhr">
+              <ion-text >
+                <!-- <p  class="p-value-margin">{{ gaugeData38[0].value }}Kpa</p> -->
+                <p  class="p-value-margin">1520</p>
+
+              </ion-text>
+        </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>

@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+    <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+  </video> -->
+  <video id="background-video" autoplay loop muted >
+    <source src="../../../assets/img/vrr (1).mp4" type="video/mp4">
+  </video>
+  <div echarts [options]="chartoption" 
+style="width:auto;height: 400px;">
+</div>
+<ion-row>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="secondary" style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title  color="dark" style="font-size:10px;margin-top:12px;">Temperature</ion-card-title>
+        <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+        <ion-icon style="padding: 5px;" size="small" name="thermometer-outline"></ion-icon>
+        <!-- <i class="bi bi-cloud-sun" ></i> -->
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{ gaugeData34[0].value }}°C</p> -->
+              <p  class="p-value-margin">39°C</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="tertiary" style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">trucks</ion-card-title>
+        <ion-icon style="padding: 5px;" size="small" name="bus-outline"></ion-icon>
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{  gaugeData56[0].value }}km/h</p> -->
+              <p  class="p-value-margin">80km/h</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="success" style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">track</ion-card-title>
+        <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+        <ion-icon style="padding: 5px;" size="small" name="location-outline"></ion-icon>
+        <!-- <i class="bi bi-cloud-sun" ></i> -->
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{ gaugeData38[0].value }}Kpa</p> -->
+              <p  class="p-value-margin">1520</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="secondary"  style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title  color="dark" style="font-size:10px;margin-top:12px;">live vechicles</ion-card-title>
+        <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+        <ion-icon style="padding: 5px;" size="small" name="thermometer-outline"></ion-icon>
+        <!-- <i class="bi bi-cloud-sun" ></i> -->
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{ gaugeData34[0].value }}°C</p> -->
+              <p  class="p-value-margin">50 vechicles</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="tertiary" style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">maintance</ion-card-title>
+        <ion-icon style="padding: 5px;" size="small" name="bus-outline"></ion-icon>
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{  gaugeData56[0].value }}km/h</p> -->
+              <p  class="p-value-margin">80km/h</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+  <ion-col style="text-align:center;padding: 3px;"size="4">
+    <!-- card 1 -->
+    <ion-card color="success" style="background-color: transparent;">
+      <div class="Innernav">
+        <ion-card-title color="dark" style="font-size:10px;margin-top:12px;">Assest healtlh</ion-card-title>
+        <!-- <ion-icon class="bi bi-cloud-sun" slot="start"  ></ion-icon> -->
+        <ion-icon style="padding: 5px;" size="small" name="location-outline"></ion-icon>
+        <!-- <i class="bi bi-cloud-sun" ></i> -->
+          <hr class="Innerhr">
+            <ion-text >
+              <!-- <p  class="p-value-margin">{{ gaugeData38[0].value }}Kpa</p> -->
+              <p  class="p-value-margin">1520</p>
+
+            </ion-text>
+      </div>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-content>

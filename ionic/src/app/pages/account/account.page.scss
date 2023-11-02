@@ -1,0 +1,27 @@
+ion-content {
+    --background: none;
+    background-clip: url('../../../assets/img/vrr\ \(1\).mp4');
+    // https://docs-demo.ionic.io/assets/madison.jpg
+    // background-image: url('https://docs-demo.ionic.io/assets/madison.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+    //   background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+}
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
